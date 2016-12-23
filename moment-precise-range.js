@@ -1,8 +1,11 @@
-if (typeof moment === "undefined" && require) {
-    moment = require('moment');
-}
+'use strict';
 
-(function(moment) {
+module.exports = function (moment) {
+
+    if(!moment){
+        moment = require('moment');
+    }
+
     var STRINGS = {
         nodiff: '',
         year: 'year',
@@ -119,4 +122,4 @@ if (typeof moment === "undefined" && require) {
 
 
     };
-}(moment));
+};
